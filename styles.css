@@ -16,6 +16,8 @@
 
 .fondo {
   background-image: url(/images/fondo.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .fondo2 {
