@@ -1,0 +1,62 @@
+.color1 {
+  color: #222831;
+}
+
+.color2 {
+  color: #393E46;
+}
+
+.color3 {
+  color: #00ADB5;
+}
+
+.color4 {
+  color: #EEEEEE;
+}
+
+.fondo {
+  background-color: #393E46;
+}
+
+.fondo2 {
+  background-color: #00ADB5;
+}
+
+.font-principal {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.font-principal a {
+  text-decoration: none;
+}
+
+* {
+  margin: 1%;
+  padding: 1%;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.item-nav {
+  background-color: #222831;
+}
+
+form {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=styles.css.map */
