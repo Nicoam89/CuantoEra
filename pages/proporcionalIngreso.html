@@ -16,7 +16,7 @@
      <meta name="description" content="¿Cuanto Era? - Tu Calculadora para Dividir Gastos">
      <meta name="keywords" content="division de gastos, cuentas claras, calculadora, Dividir, dividir Salidas, cuota alimentaria">
         <!-- Scripts JS -->
-    <script src="./scripts.js"></script>
+    <script async src="./scripts.js"></script>
     
      <!-- Titulo Pagina -->
     <title>¿Cuanto Era? - ¿A quien le debo?</title>
@@ -47,7 +47,28 @@
 </div>
         <h2 class="font-principal fondo2 color4">¿Cuanto nos debemos?</h2>
         <h3 class="font-principal fondo2 color1">Ideal para los gastos de parejas (o ex parejas)</h3>
-         <p class="font-principal fondo2 color4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima id dolore quasi reiciendis, voluptatum omnis possimus nobis magnam iste perspiciatis vero labore libero molestiae blanditiis mollitia ipsa enim culpa eius. Nobis aliquam, animi minima quibusdam voluptatum deserunt et tempora nulla officia perspiciatis. Nemo commodi molestias, exercitationem fugit sit aspernatur culpa pariatur, quia sequi velit labore. Animi repellat exercitationem suscipit quos ea enim modi odit, ad, nostrum tempora accusamus eligendi sapiente. Libero dolores aliquam repellendus eos sapiente ipsam tenetur. Sapiente nisi ad animi doloribus nostrum, quidem totam. Sit voluptas ipsum consequatur totam porro tenetur iusto aut cum! Neque nisi pariatur libero a, similique mollitia assumenda repellat perspiciatis tempora voluptates nesciunt debitis reprehenderit in velit eius quam ducimus modi deserunt. Veritatis veniam accusantium, suscipit illo non iusto nihil dignissimos. Id, ipsam quibusdam vel repellat unde, quod itaque ad maxime voluptates rem aliquam ratione voluptas eligendi, accusantium cum libero reiciendis possimus. Odit tempora fugiat molestiae enim vel dolorem consequatur quibusdam nobis facilis suscipit consectetur placeat delectus in ea error ratione eveniet nemo dolorum molestias officiis, repudiandae, cumque modi. Exercitationem fugiat doloribus impedit eius quam aliquam dolor mollitia. Fuga rem rerum dolorum iure soluta sunt officiis minima tempore porro possimus, ab cum cumque ipsa libero placeat ipsam. Cumque unde cum similique voluptate illum iusto sint ipsam deleniti, velit rerum dolorem nesciunt ducimus porro soluta ratione numquam enim ipsum aliquid maiores et provident quia! Voluptas aspernatur animi illum dolore consequatur dolorem praesentium consectetur maiores sapiente quibusdam quidem perspiciatis, labore optio eligendi assumenda aliquam, illo odit.</p>
+        <div class="font-principal fondo2 color1"> 
+                    <div><h4>Cuanto ganamos</h4>
+            <div>
+            <label for="ingresos-1" class=""><h5>Ingresos</h5></label>
+            <input type="number" id="ingresos-1" min="0" step="any" class="">
+            <label for="ingresos-2" class=""><h5>Ingresos</h5></label>
+            <input type="number" id="ingresos-2" min="0" step="any" class="">
+            </div>
+            <div><h4>Cuanto Pagamos</h4>
+            <div>
+            <label for="ingresos-1" class=""><h5>Ingresos</h5></label>
+            <input type="number" id="ingresos-1" min="0" step="any" class="">
+            <label for="ingresos-2" class=""><h5>Ingresos</h5></label>
+            <input type="number" id="ingresos-2" min="0" step="any" class="">
+            </div>
+            <div class="text-center">
+            <button onclick="calcular()" class="btn btn-light btn-lg">Calcular</button>
+            <div class="totales font-principal fondo2 color4" id="resultado">
+              <h3 class="resultado">Resultado</h3>
+            </div> 
+        </div>    
+            
     </main>
     <footer class="fondo2">
         <h3 class="font-principal color1">¿Comentarios?</h3>

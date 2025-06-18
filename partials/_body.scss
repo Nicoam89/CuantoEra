@@ -38,3 +38,13 @@ a:hover {
 input{
   margin: 3%;
 }
+
+.calculadora2{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+
+}

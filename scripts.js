@@ -24,7 +24,7 @@
       alert("Recuerde dejar propina");
     }
 
-        // Alerta si la propina es menor al 5% del ticket
+    // Alerta si la propina es menor al 5% del ticket
 
         const porcentajePropina = (propina / monto) * 100;
     if (propina > 0 && porcentajePropina < 5) {
@@ -39,4 +39,3 @@
       <h3 class"totales"><strong>Cada persona debe pagar:</strong> $${montoPorPersona}</h3>
     `;
   }
-
