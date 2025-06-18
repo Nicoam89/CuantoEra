@@ -61,4 +61,28 @@ a:visited {
 
 a:hover {
   transform: scale(1.1);
+}
+
+.totales {
+  background-color: white;
+  color: black;
+  font-size: large;
+  width: 50%;
+}
+
+.calculadora1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-around;
+}
+
+.btn {
+  margin-top: 3%;
+}
+
+input {
+  margin: 3%;
 }/*# sourceMappingURL=styles.css.map */
