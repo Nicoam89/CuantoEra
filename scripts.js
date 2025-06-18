@@ -28,7 +28,7 @@
 
         const porcentajePropina = (propina / monto) * 100;
     if (propina > 0 && porcentajePropina < 5) {
-      alert(`La propina es menor al 5% (${porcentajePropina.toFixed(2)}%). No seas rata.`);
+      alert(`La propina es menor de(${porcentajePropina.toFixed(2)}%. No seas rata.`);
     }
 
     const total = monto + propina;
