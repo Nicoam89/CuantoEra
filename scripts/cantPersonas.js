@@ -1,6 +1,6 @@
 // Division por Cantidad de Personas
 
-  function calcular() {
+  function calcular_por_personas() {
     const monto = parseFloat(document.getElementById('monto').value) || 0;
     const propina = parseFloat(document.getElementById('propina').value) || 0;
     const cantPersonas = parseInt(document.getElementById('cantPersonas').value) || 0;

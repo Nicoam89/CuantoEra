@@ -1,0 +1,34 @@
+/* Formato Main */
+
+/* Formato Calculadora x cantidad de personas */
+
+.calculadora1{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: space-around;
+}
+
+.btn{
+  margin-top: 4%;
+  margin-bottom: 3%;
+}
+
+input{
+  margin: 3%;
+}
+
+/* Formato Calculadora proporcional al gasto */
+
+.calculadora2{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+
+}
+

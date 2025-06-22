@@ -1,3 +1,4 @@
+/* Variables */
 .color1 {
   color: #222831;
 }
@@ -34,6 +35,7 @@
   text-decoration: none;
 }
 
+/* Reset */
 * {
   margin: 1%;
   padding: 1%;
@@ -43,33 +45,9 @@
   text-align: center;
 }
 
-.item-nav {
-  background-color: #222831;
-}
-
-form {
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  transform: scale(1.1);
-}
-
-.totales {
-  background-color: white;
-  color: black;
-  font-size: large;
-  width: 50%;
-}
-
+/* Formato Header */
+/* Formato Main */
+/* Formato Calculadora x cantidad de personas */
 .calculadora1 {
   display: flex;
   flex-direction: column;
@@ -88,6 +66,67 @@ input {
   margin: 3%;
 }
 
+/* Formato Calculadora proporcional al gasto */
+.calculadora2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+/* Formato Navegador */
+.item-nav {
+  background-color: #222831;
+}
+
+/* Formato Footer */
+form {
+  text-align: center;
+}
+
+/* Formato Links */
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+/* Formato Totales */
+.totales {
+  background-color: white;
+  color: black;
+  font-size: large;
+  width: 50%;
+}
+
+/* Formato Calculadora x cantidad de personas */
+.calculadora1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-around;
+}
+
+.btn {
+  margin-top: 4%;
+  margin-bottom: 3%;
+}
+
+input {
+  margin: 3%;
+}
+
+/* Formato Calculadora proporcional al gasto */
 .calculadora2 {
   display: flex;
   flex-direction: row;
