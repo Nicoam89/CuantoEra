@@ -24,13 +24,16 @@ input{
 
 .calculadora2{
 
-	
+	box-sizing: border-box;
 
 }
 
-	tr{
-		width: 100%
+tr{
+	
+	th{
+		max-width: 30%;
 	}
+}
 
 .totales{
 	width: 30%;
