@@ -5,23 +5,79 @@
 // Paso 4: Se destilda lo que no corresponda en la grilla
 // Paso 5: Se calcula cuanto le corresponde a cada uno
 
+const participantes = [];
 
-// Funcion Calcular Total (para calcular automaticamente el valor del ticket)
+    function agregarFila() {
+      const fila = document.createElement("tr");
+      fila.innerHTML = `
+        <td><input type="text" placeholder="Ej: Producto"></td>
+        <td><input type="number" class="monto" value="0" min="0"></td>
+        <td class="participantes"></td>
+      `;
+      document.getElementById("ticketBody").appendChild(fila);
+      actualizarCheckboxes();
+    }
 
-function totalTicket(){
-const inputs = document.querySelectorAll('.monto');
-  let total = 0;
+    function agregarParticipante() {
+      const nombre = document.getElementById("nuevoParticipante").value.trim();
+      if (nombre && !participantes.includes(nombre)) {
+        participantes.push(nombre);
+        document.getElementById("listaParticipantes").innerHTML += `<li>${nombre}</li>`;
+        actualizarCheckboxes();
+        document.getElementById("nuevoParticipante").value = "";
+      }
+    }
 
-  inputs.forEach(input => {
-    const valor = parseFloat(input.value) || 0;
-    total += valor;
-  });
+    function actualizarCheckboxes() {
+      const filas = document.querySelectorAll("#ticketBody tr");
+      filas.forEach(fila => {
+        const contenedor = fila.querySelector(".participantes");
+        contenedor.innerHTML = "";
+        participantes.forEach(p => {
+          const checkbox = document.createElement("label");
+          checkbox.innerHTML = `<input type="checkbox" value="${p}" checked> ${p} `;
+          contenedor.appendChild(checkbox);
+        });
+      });
+    }
 
-  document.getElementById('total').textContent = total.toFixed(2);
-}
+    function calcularTotal() {
+      const totales = {};
+      participantes.forEach(p => totales[p] = 0);
 
-// Ejecutar al cambiar un monto
-document.querySelectorAll('.monto').forEach(input => {
-  input.addEventListener('input', totalTicket);
-});
+      const filas = document.querySelectorAll("#ticketBody tr");
+      let subtotal = 0;
+
+      filas.forEach(fila => {
+        const monto = parseFloat(fila.querySelector(".monto").value) || 0;
+        const checks = fila.querySelectorAll("input[type='checkbox']:checked");
+        const dividendo = checks.length;
+
+        if (dividendo > 0) {
+          const parte = monto / dividendo;
+          checks.forEach(check => {
+            totales[check.value] += parte;
+          });
+        }
+
+        subtotal += monto;
+      });
+
+      const propina = parseFloat(document.getElementById("propina").value) || 0;
+      const propinaPorPersona = propina / participantes.length;
+
+      participantes.forEach(p => {
+        totales[p] += propinaPorPersona;
+      });
+
+      // Mostrar resultados
+      let html = "<ul>";
+      participantes.forEach(p => {
+        html += `<li><strong>${p}:</strong> $${totales[p].toFixed(2)}</li>`;
+      });
+      html += "</ul>";
+
+      document.getElementById("resultado").innerHTML = html;
+    }
+
 

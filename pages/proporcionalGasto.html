@@ -51,74 +51,43 @@
         <div class="font-principal fondo2">
           <img src="../images/OE60SA0.jpg" alt="En Construccion">
         </div>
-            <div class="font-principal fondo2 text-center calculadora2">
-              <div class="paso1 container">
-              <h3 class="font-principal fondo2 color1 col">Paso 1: Cargar ticket detallado</h3>
-              <div class="col">
-              <label for="item1" class=""><h4><input type="text" placeholder="Ej: Comida"></h4></label>
-              <input type="number" id="monto" min="0" step="any" class="monto">
-              </div>
-              <div class="col">
-              <label for="item2" class=""><h4><input type="text" placeholder="Ej: Gaseosa"></h4></label>
-              <input type="number" id="monto" min="0" step="any" class="monto">
-              </div>
-              <div class="col">
-              <label for="item3" class=""><h4><input type="text" placeholder="Ej: Cerveza"></h4></label>
-              <input type="number" id="monto" min="0" step="any" class="monto">
-              </div>
-              <div class="col">
-              <label for="item4" class=""><h4><input type="text" placeholder="Ej: Postre"></h4></label>
-              <input type="number" id="monto" min="0" step="any" class="monto">
-              </div>
-              <div class="col">
-              <label for="item5" class=""><h4><input type="text" placeholder="Ej: Cubierto"></h4></label>
-              <input type="number" id="monto" min="0" step="any" class="monto">
-              </div>
-            <div class="col">
-              <label for="totalTicket"><h4>Total Ticket ($):</h4></label>
-              <h4 class="totales"><span id="total"></span></h4>
+        <div class="font-principal fondo2 text-center">
+              <table id="ticketTable">
+    <thead>
+      <tr>
+        <th><h3>Concepto</h3></th>
+        <th><h3>Monto</h3></th>
+        <th><h3>Asignar a</h3></th>
+      </tr>
+    </thead>
+    <tbody id="ticketBody">
+      <tr>
+        <td><input type="text" placeholder="Ej: Pizza"></td>
+        <td><input type="number" class="monto" value="0" min="0"></td>
+        <td class="participantes"></td>
+      </tr>
+    </tbody>
+  </table>
+  <button onclick="agregarFila()" class="btn btn-light btn-lg">➕ Agregar ítem</button>
 
-            </div>  
-            
-            </div>
+  <!-- Paso 2: Propina -->
+  <h3>Propina</h3>
+  <input type="number" id="propina" value="0" min="0">
 
+  <!-- Paso 3: Participantes -->
+  <h3>Participantes</h3>
+  <input type="text" id="nuevoParticipante" placeholder="Nombre">
+  <button onclick="agregarParticipante()" class="btn btn-light btn-lg">Agregar</button>
+  <ul id="listaParticipantes"></ul>
 
-              <div class="paso2 container">
-                <h3 class="font-principal fondo2 color1 col">Paso 2: Cargar Propina</h3>
-                 <div class="col">
-                <label for="propina" class=""><h4>Propina ($):</h4></label>
-            <input type="number" id="propina" min="0" step="any" class="">
-              </div>    
-              </div>
-              <div class="paso3 container">
-              <div class="col">
-              <label for="persona1" class=""><h4><input type="text" placeholder="Ej: Nico"></h4></label>
-              </div>
-              <div class="col">
-              <label for="persona2" class=""><h4><input type="text" placeholder="Ej: Tate"></h4></label>
-              </div>  
-              <div class="col">
-              <label for="persona3" class=""><h4><input type="text" placeholder="Ej: Maxi"></h4></label>
-              </div>
-              <div class="col">
-              <label for="persona4" class=""><h4><input type="text" placeholder="Ej: Clari"></h4></label>
+  <!-- Paso 5: Calcular -->
+  <h3>Total por persona</h3>
+  <button onclick="calcularTotal()" class="btn btn-light btn-lg">Calcular</button>
 
-              </div>
-              <div class="col">
-              <label for="persona5" class=""><h4><input type="text" placeholder="Ej: Lucas"></h4></label>
-
-              </div>
-              <div class="col">
-              <label for="persona6" class=""><h4><input type="text" placeholder="Ej: Caro"></h4></label>
-              </div>
-            
-            </div>
-            <div class="paso4 container">
-
-
-            </div>
+  <div id="resultado"></div>
         </div>   
        
+        </div>
       </main>
 
     <footer class="fondo2">

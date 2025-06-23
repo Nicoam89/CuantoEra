@@ -76,6 +76,10 @@ input {
   align-content: stretch;
 }
 
+.totales {
+  width: 30%;
+}
+
 /* Formato Navegador */
 .item-nav {
   background-color: #222831;
