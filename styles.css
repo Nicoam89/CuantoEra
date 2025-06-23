@@ -67,13 +67,8 @@ input {
 }
 
 /* Formato Calculadora proporcional al gasto */
-.calculadora2 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: stretch;
+tr {
+  width: 100%;
 }
 
 .totales {
