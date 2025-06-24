@@ -50,6 +50,14 @@
 
         <div class="font-principal fondo2 text-center">
 
+
+            <!-- Paso 1: Participantes -->
+  <h3>Participantes</h3>
+  <input type="text" id="nuevoParticipante" placeholder="Nombre">
+  <button onclick="agregarParticipante()" class="btn btn-light btn-lg">Agregar</button>
+  <ul id="listaParticipantes"></ul>
+
+  <!-- Paso 2: ticket -->
           <table id="ticketTable">
   <thead>
     <tr>
@@ -72,15 +80,11 @@
 
   <h3 class="totales font-principal fondo2 color4">Total Ticket: <span id="totalTicket"></span></h3>
 
-  <!-- Paso 2: Propina -->
+  <!-- Paso 4: Propina -->
   <h3>Propina</h3>
   <input type="number" id="propina" value="0" min="0">
 
-  <!-- Paso 3: Participantes -->
-  <h3>Participantes</h3>
-  <input type="text" id="nuevoParticipante" placeholder="Nombre">
-  <button onclick="agregarParticipante()" class="btn btn-light btn-lg">Agregar</button>
-  <ul id="listaParticipantes"></ul>
+
 
   <!-- Paso 5: Calcular -->
   <h3>Total por persona</h3>
