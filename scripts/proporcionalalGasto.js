@@ -30,20 +30,22 @@ const participantes = [];
       }
     }
 
-    function actualizarCheckboxes() {
-      const filas = document.querySelectorAll("#ticketBody tr");
-      filas.forEach(fila => {
-        const contenedor = fila.querySelector(".participantes");
-        contenedor.innerHTML = "";
-        participantes.forEach(p => {
-          const checkbox = document.createElement("label");
-          checkbox.innerHTML = `<div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" value="${p}" checked> ${p} 
-          </div>`;
-          contenedor.appendChild(checkbox);
-        });
-      });
-    }
+function actualizarCheckboxes() {
+  const filas = document.querySelectorAll("#ticketBody tr");
+  filas.forEach(fila => {
+    const contenedor = fila.querySelector(".participantes");
+    if (!contenedor) return; // 🔒 evita error si la fila no tiene la celda .participantes
+    contenedor.innerHTML = "";
+    participantes.forEach(p => {
+      const label = document.createElement("label");
+      label.className = "form-check form-switch me-2";
+      label.innerHTML = `
+        <input class="form-check-input" type="checkbox" checked value="${p}"> ${p}
+      `;
+      contenedor.appendChild(label);
+    });
+  });
+}
 
 
 
@@ -73,7 +75,7 @@ const participantes = [];
       const propina = parseFloat(document.getElementById("propina").value) || 0;
       const propinaPorPersona = propina / participantes.length;
 
-          // Alerta si la propina es 0
+      // Alerta si la propina es 0
 
         if (propina === 0) {
       alert("Recuerde dejar propina");
@@ -85,7 +87,7 @@ const participantes = [];
         totales[p] += propinaPorPersona;
       });
 
-// Paso 5: Se calcula cuanto le corresponde a cada uno
+    // Paso 5: Se calcula cuanto le corresponde a cada uno
       let html = "<ul>";
       participantes.forEach(p => {
         html += `<li><strong>${p}:</strong> $${totales[p].toFixed(2)}</li>`;
