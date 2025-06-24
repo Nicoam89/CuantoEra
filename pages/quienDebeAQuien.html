@@ -47,9 +47,34 @@
 </div>
         <h2 class="font-principal fondo2 color4">¿A quien le debo?</h2>
         <h3 class="font-principal fondo2 color1">Ideal para cuando muchos pusieron y hay que Dividir</h3>
-                 <div class="font-principal fondo2">
-          <img src="../images/OE60SA0.jpg" alt="En Construccion">
-        </div>
+        <section class="font-principal fondo2 text-center calculadora1">
+
+  <table id="tablaPersonas">
+    <thead>
+      <tr>
+        <th><h3 class="p-3">Nombre</h3></th>
+        <th><h3 class="p-3">Monto</h3></th>
+        <th><h3 class="p-3">Quitar</h3></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="text" placeholder="Nombre" class="nombre"></td>
+        <td><input type="number" value="0" class="monto" min="0" step="0.01"></td>
+        <td><button onclick="quitarFila(this)" class="btn btn-light btn-lg">X</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button onclick="agregarFila()" class="btn btn-light btn-lg">Agregar Persona</button>
+
+  <h3 class="totales font-principal fondo2 color4">Total Gastado: <span id="totalGastado"></span></h3>
+
+
+  <button onclick="calcularReparto()" class="btn btn-light btn-lg">Calcular</button>
+
+  <div id="resultados" class="resultado totales font-principal fondo2 color4"></div>
+        </section>
     </main>
     <footer class="fondo2">
         <h3 class="font-principal color1">¿Comentarios?</h3>
