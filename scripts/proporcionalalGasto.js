@@ -47,9 +47,6 @@ const participantes = [];
   });
 }
 
-
-
-
     function calcularTotal() {
       const totales = {};
       participantes.forEach(p => totales[p] = 0);
@@ -82,9 +79,9 @@ const participantes = [];
       alert("Recuerde dejar propina");
     }
 
-    if (propina < subtotal * 0.05) {
-  alert("La propina es inferior al 5% No seas rata.");
-}
+      if (propina < subtotal * 0.05) {
+    alert("La propina es inferior al 5%, No seas rata.");
+      }
 
 
       participantes.forEach(p => {
@@ -102,3 +99,20 @@ const participantes = [];
     }
 
     
+    // Mostrar Monto Total Ticket
+
+    function totalTicket() {
+  const inputs = document.querySelectorAll('#monto'); // selector válido aunque repetido
+  let total = 0;
+
+  inputs.forEach(input => {
+    const valor = parseFloat(input.value) || 0;
+    total += valor;
+  });
+
+  document.getElementById('totalTicket').textContent = total.toFixed(2);
+}
+
+document.querySelectorAll('#monto').forEach(input => {
+  input.addEventListener('input', totalTicket);
+});

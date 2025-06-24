@@ -62,13 +62,15 @@
   <tbody id="ticketBody">
     <tr>
       <td data-label="Concepto"><input type="text" placeholder="Ej: Pizza"></td>
-      <td data-label="Monto"><input type="number" class="monto" value="0" min="0"></td>
+      <td data-label="Monto"><input type="number" id="monto" class="monto" value="0" min="0"></td>
       <td data-label="Pagan" class="participantes"></td>
     </tr>
   </tbody>
 </table>
 
   <button onclick="agregarFila()" class="btn btn-light btn-lg">+ Agregar ítem</button>
+
+  <h3 class="totales font-principal fondo2 color4">Total Ticket: <span id="totalTicket"></span></h3>
 
   <!-- Paso 2: Propina -->
   <h3>Propina</h3>
