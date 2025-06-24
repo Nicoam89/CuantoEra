@@ -85,7 +85,7 @@ const participantes = [];
       alert("Recuerde dejar propina");
     }
 
-      if (propina < subtotal * 0.05) {
+    if (propina < subtotal * 0.05) {
     alert("La propina es inferior al 5%, No seas rata.");
       }
 

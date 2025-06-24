@@ -46,6 +46,10 @@
 }
 
 /* Formato Header */
+header a {
+  text-decoration: none;
+}
+
 /* Formato Main */
 /* Formato Calculadora x cantidad de personas */
 .calculadora1 {
