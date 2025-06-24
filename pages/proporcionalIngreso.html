@@ -45,13 +45,65 @@
             <a class="item-nav text-white" href="/pages/quienDebeAQuien.html">¿A quien le debo?</a>
   </div>
 </div>
-        <h2 class="font-principal fondo2 color4">¿Cuanto nos debemos?</h2>
-        <h3 class="font-principal fondo2 color1">Ideal para los gastos de parejas (o ex parejas)</h3>
-        <div class="font-principal fondo2 color1"> 
-        <div class="font-principal fondo2">
-          <img src="../images/OE60SA0.jpg" alt="En Construccion">
-        </div>
-            
+<h2 class="font-principal fondo2 color4">¿Cuánto nos debemos?</h2>
+<h3 class="font-principal fondo2 color1">Ideal para los gastos de parejas (o ex parejas)</h3>
+
+<section class="font-principal fondo2 color1">
+
+  <!-- Sección de Ingresos -->
+  <div class="font-principal fondo2 text-center calculadora1">
+    <h2 class="font-principal color1">Ingresos</h2>
+    
+    <table id="tablaIngresos">
+      <thead>
+        <tr>
+          <th><h3 class="p-3">Nombre</h3></th>
+          <th><h3 class="p-3">Ingreso</h3></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Nombre"><input type="text" placeholder="Ej: Brad"></td>
+          <td data-label="Ingreso"><input type="number" class="ingreso" value="0"></td>
+        </tr>
+        <tr>
+          <td data-label="Nombre"><input type="text" placeholder="Ej: Angelina"></td>
+          <td data-label="Ingreso"><input type="number" class="ingreso" value="0"></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3 class="totales font-principal fondo2 color4">Total Ingresos: <span id="totalIngresos"></span></h3>
+    
+    <!-- Sección de Gastos -->
+    <h2 class="font-principal color1">Gastos</h2>
+    
+    <table id="ticketTable">
+      <thead>
+        <tr>
+          <th><h3 class="p-3">Concepto</h3></th>
+          <th><h3 class="p-3">Monto</h3></th>
+        </tr>
+      </thead>
+      <tbody id="ticketBody">
+        <tr>
+          <td data-label="Concepto"><input type="text" placeholder="Ej: Pizza"></td>
+          <td data-label="Monto"><input type="number" class="monto" value="0"></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <button onclick="agregarFila()" class="btn btn-light btn-lg">+ Agregar ítem</button>
+    <h3 class="totales font-principal fondo2 color4">Total Gastos: <span id="totalTicket"></span></h3>
+    
+    <h3>Total por persona</h3>
+    <button onclick="calcularTotal()" class="btn btn-light btn-lg">Calcular</button>
+    
+    <div class="totales font-principal fondo2 color4" id="resultado">
+      <h3>Resultado</h3>
+    </div>
+  </div>
+</section>
     </main>
     <footer class="fondo2">
         <h3 class="font-principal color1">¿Comentarios?</h3>
