@@ -30,7 +30,7 @@ const participantes = [];
       const nombre = document.getElementById("nuevoParticipante").value.trim();
       if (nombre && !participantes.includes(nombre)) {
         participantes.push(nombre);
-        document.getElementById("listaParticipantes").innerHTML += `<li>${nombre}</li>`;
+        //document.getElementById("listaParticipantes").innerHTML += `<li>${nombre}</li>`;
         actualizarCheckboxes();
         document.getElementById("nuevoParticipante").value = "";
       }
