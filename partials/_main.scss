@@ -29,8 +29,6 @@ input{
 
 }
 
-
-
 .totales{
 	width: 30%;
 
@@ -53,20 +51,21 @@ input {
 }
 
 /* Responsive para celulares */
-@media (max-width: 600px) {
+@media (max-width: 560px) {
   table, thead, tbody, th, td, tr {
     display: block;
+    text-align: center;
   }
 
-  thead {
+    thead {
     display: none; /* Opcional: ocultar encabezados para simplificar */
   }
-
   td {
     position: relative;
     padding-left: 50%;
     border: none;
     border-bottom: 1px solid #ddd;
+
   }
 
   td::before {

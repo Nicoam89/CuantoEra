@@ -92,9 +92,10 @@ input {
 }
 
 /* Responsive para celulares */
-@media (max-width: 600px) {
+@media (max-width: 560px) {
   table, thead, tbody, th, td, tr {
     display: block;
+    text-align: center;
   }
   thead {
     display: none; /* Opcional: ocultar encabezados para simplificar */
