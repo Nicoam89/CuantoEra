@@ -7,6 +7,7 @@
 
 const participantes = [];
 
+// Paso 1: se carga el ticket detallado
     function agregarFila() {
       const fila = document.createElement("tr");
       fila.innerHTML = `
@@ -18,6 +19,7 @@ const participantes = [];
       actualizarCheckboxes();
     }
 
+// Paso 3: Se Cargan los nombres de las personas por las que se divide    
     function agregarParticipante() {
       const nombre = document.getElementById("nuevoParticipante").value.trim();
       if (nombre && !participantes.includes(nombre)) {
@@ -35,11 +37,15 @@ const participantes = [];
         contenedor.innerHTML = "";
         participantes.forEach(p => {
           const checkbox = document.createElement("label");
-          checkbox.innerHTML = `<input type="checkbox" value="${p}" checked> ${p} `;
+          checkbox.innerHTML = `<div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" value="${p}" checked> ${p} 
+          </div>`;
           contenedor.appendChild(checkbox);
         });
       });
     }
+
+
 
     function calcularTotal() {
       const totales = {};
@@ -63,14 +69,23 @@ const participantes = [];
         subtotal += monto;
       });
 
+      // Paso 2: Se carga la Propina
       const propina = parseFloat(document.getElementById("propina").value) || 0;
       const propinaPorPersona = propina / participantes.length;
+
+          // Alerta si la propina es 0
+
+        if (propina === 0) {
+      alert("Recuerde dejar propina");
+    }
+
+
 
       participantes.forEach(p => {
         totales[p] += propinaPorPersona;
       });
 
-      // Mostrar resultados
+// Paso 5: Se calcula cuanto le corresponde a cada uno
       let html = "<ul>";
       participantes.forEach(p => {
         html += `<li><strong>${p}:</strong> $${totales[p].toFixed(2)}</li>`;
@@ -80,4 +95,4 @@ const participantes = [];
       document.getElementById("resultado").innerHTML = html;
     }
 
-
+    

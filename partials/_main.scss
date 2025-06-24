@@ -26,16 +26,53 @@ input{
 
 	box-sizing: border-box;
 
+
 }
 
-tr{
-	
-	th{
-		max-width: 30%;
-	}
-}
+
 
 .totales{
 	width: 30%;
 
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive para celulares */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none; /* Opcional: ocultar encabezados para simplificar */
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+  }
 }
