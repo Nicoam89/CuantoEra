@@ -61,10 +61,15 @@
     </tr>
   </thead>
   <tbody id="ticketBody">
-<tr>
+    <tr>
+      <td data-label="Concepto"><input type="text" placeholder="Ej: Pizza"></td>
+      <td data-label="Monto"><input type="number" class="monto" value="0" min="0"></td>
+      <td data-label="Pagan" class="participantes"></td>
+    </tr>
+    <tr>
   <td data-label="Concepto"><input type="text" placeholder="Ej: Pizza"></td>
   <td data-label="Monto"><input type="number" class="monto" value="0" min="0"></td>
-  <td data-label="Pagan"></td>
+  <td data-label="Pagan"><!-- contenido dinámico --></td>
 </tr>
   </tbody>
 </table>
