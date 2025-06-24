@@ -122,6 +122,10 @@ input {
   background-color: #222831;
 }
 
+nav a {
+  text-decoration: none;
+}
+
 /* Formato Footer */
 form {
   text-align: center;
