@@ -30,7 +30,7 @@ const participantes = [];
       }
     }
 
-function actualizarCheckboxes() {
+    function actualizarCheckboxes() {
   const filas = document.querySelectorAll("#ticketBody tr");
   filas.forEach(fila => {
     const contenedor = fila.querySelector(".participantes");
@@ -46,6 +46,7 @@ function actualizarCheckboxes() {
     });
   });
 }
+
 
 
 
@@ -81,6 +82,9 @@ function actualizarCheckboxes() {
       alert("Recuerde dejar propina");
     }
 
+    if (propina < subtotal * 0.05) {
+  alert("La propina es inferior al 5% No seas rata.");
+}
 
 
       participantes.forEach(p => {
@@ -90,7 +94,7 @@ function actualizarCheckboxes() {
     // Paso 5: Se calcula cuanto le corresponde a cada uno
       let html = "<ul>";
       participantes.forEach(p => {
-        html += `<li><strong>${p}:</strong> $${totales[p].toFixed(2)}</li>`;
+        html += `<h3 class"totales"><strong>${p}:</strong> $${totales[p].toFixed(2)}</h3>`;
       });
       html += "</ul>";
 
