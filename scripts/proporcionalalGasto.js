@@ -11,12 +11,18 @@ const participantes = [];
     function agregarFila() {
       const fila = document.createElement("tr");
       fila.innerHTML = `
-        <td><input type="text" placeholder="Ej: Producto"></td>
-        <td><input type="number" class="monto" value="0" min="0"></td>
-        <td class="participantes"></td>
+      <td data-label="Concepto"><input type="text" placeholder="Otro Item"></td>
+      <td data-label="Monto"><input type="number" id="monto" class="monto" value="0"></td>
+      <td data-label="Pagan" class="participantes"></td>
       `;
       document.getElementById("ticketBody").appendChild(fila);
       actualizarCheckboxes();
+
+        // Agregar evento al nuevo input de monto
+      fila.querySelector('.monto').addEventListener('input', totalTicket);
+
+      // Opcional: recalcular total cuando se agrega una nueva fila
+     totalTicket();
     }
 
 // Paso 3: Se Cargan los nombres de las personas por las que se divide    
@@ -101,8 +107,8 @@ const participantes = [];
     
     // Mostrar Monto Total Ticket
 
-    function totalTicket() {
-  const inputs = document.querySelectorAll('#monto'); // selector válido aunque repetido
+  function totalTicket() {
+  const inputs = document.querySelectorAll('#monto');
   let total = 0;
 
   inputs.forEach(input => {
